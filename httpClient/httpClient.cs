@@ -119,7 +119,8 @@ namespace mySpace.httpClient
                 if (httpRequest.CookieContainer == null) { httpRequest.CookieContainer = new System.Net.CookieContainer(); }
                 for (int i = 0; i < this.cookies.Count; i++)
                 {
-                    httpRequest.CookieContainer.Add(new System.Net.Cookie(this.cookies[i].name, this.cookies[i].value, this.cookies[i].path, new Uri(this.URI).Host));
+                    // httpRequest.CookieContainer.Add(new System.Net.Cookie(this.cookies[i].name, this.cookies[i].value, this.cookies[i].path, new Uri(this.URI).Host));
+                    httpRequest.CookieContainer.Add(new System.Net.Cookie(System.Web.HttpUtility.UrlEncode(this.cookies[i].name), System.Web.HttpUtility.UrlEncode(this.cookies[i].value), this.cookies[i].path, new Uri(this.URI).Host));
                 }
             }
             // Add headers            
@@ -268,7 +269,8 @@ namespace mySpace.httpClient
                 if (httpRequest.CookieContainer == null) { httpRequest.CookieContainer = new System.Net.CookieContainer(); }
                 for (int i = 0; i < this.cookies.Count; i++)
                 {
-                    httpRequest.CookieContainer.Add(new System.Net.Cookie(this.cookies[i].name, this.cookies[i].value, this.cookies[i].path, new Uri(this.URI).Host));
+                    // httpRequest.CookieContainer.Add(new System.Net.Cookie(this.cookies[i].name, this.cookies[i].value, this.cookies[i].path, new Uri(this.URI).Host));
+                    httpRequest.CookieContainer.Add(new System.Net.Cookie(System.Web.HttpUtility.UrlEncode(this.cookies[i].name), System.Web.HttpUtility.UrlEncode(this.cookies[i].value), this.cookies[i].path, new Uri(this.URI).Host));
                 }
             }
             // Add headers            

@@ -1,4 +1,4 @@
-# httpClient
+# MySpace.httpClient
 
 A generic http client class
 
@@ -6,7 +6,7 @@ A generic http client class
 
 Add a reference to the class .dll in your project. For convenience, also add the namespace.
 
-	using mySpace.httpClient;
+	using MySpace.httpClient;
 
 ## Examples
 

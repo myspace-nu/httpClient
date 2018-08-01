@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mySpace.httpClient
+namespace MySpace.httpClient
 {
     public class httpCookie
     {
